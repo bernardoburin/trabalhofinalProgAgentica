@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: horas-postgres
+    environment:
+      POSTGRES_DB: horas
+      POSTGRES_USER: horas_admin
+      POSTGRES_PASSWORD: admin_local   # só para desenvolvimento local
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d:ro
+      - dados_horas:/var/lib/postgresql/data
+
+volumes:
+  dados_horas:

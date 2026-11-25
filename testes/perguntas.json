@@ -1,0 +1,247 @@
+[
+  {
+    "id": 1, "aluno": "2022101", "tipo": "limite_oculto",
+    "armadilha": "Item e subcategoria têm espaço; o teto de 100h da Categoria IV, não.",
+    "pergunta": "Consegui um estágio de 6 meses a partir de dezembro. Quantas horas complementares ele vai me dar?",
+    "resposta_esperada": "10h. Seis meses valem 30h brutas (5h/mês) e a subcategoria IV-II ainda tem 50h livres, mas a Categoria IV tem limite de 100h e já está com 90h (50 de monitoria + 40 do estágio anterior).",
+    "base": "Anexo A, Categoria IV (limite 100h), IV-II",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "IV-II-1", "quantidade": 6, "data": "2026-12-01", "protocolo": "2026-12-15"}, "ganho": 10}]}
+  },
+  {
+    "id": 2, "aluno": "2022101", "tipo": "limite_oculto",
+    "armadilha": "Monitoria parece render 25h; o item já está no teto.",
+    "pergunta": "Me chamaram para ser monitor de Banco de Dados no próximo semestre. Vale a pena pelas horas?",
+    "resposta_esperada": "Pelas horas, não: 0h. Monitoria vale 25h por semestre com limite de 50h (item e subcategoria IV-I), e já há 2 semestres validados (50h). A Categoria IV também está com 90h de 100h.",
+    "base": "Anexo A, IV-I",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "IV-I-1", "quantidade": 1, "data": "2027-07-10", "protocolo": "2027-07-20"}, "ganho": 0}]}
+  },
+  {
+    "id": 3, "aluno": "2022101", "tipo": "limite_oculto",
+    "armadilha": "50% de 40h são 20h, mas o item dos cursos de 4 a 40h só tem 15h livres.",
+    "pergunta": "Quero fazer um curso de Rust de 40 horas. Quanto ele conta?",
+    "resposta_esperada": "15h, não 20h. Conta 50% da carga horária (20h), mas o item de cursos de 4 a 40h tem limite de 60h e já tem 45h usadas (Docker 10h + Go 15h + Kubernetes 20h).",
+    "base": "Anexo A, V-II, curso de 4 a 40 horas (limite 60h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "V-II-1", "quantidade": 40, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 15}]}
+  },
+  {
+    "id": 4, "aluno": "2022101", "tipo": "saldo",
+    "armadilha": "Converter cada unidade certo: semestres de monitoria (25h), meses de estágio (5h) e 50% da carga horária dos cursos.",
+    "pergunta": "Quantas horas complementares eu já tenho e quanto falta?",
+    "resposta_esperada": "165h; faltam 35h. Já há horas em 3 categorias (I, IV e V), então o mínimo de 2 categorias está cumprido.",
+    "base": "Art. 8º, Art. 9º, Anexo A",
+    "verificacao": {"saldo": {"total": 165, "concluido": false, "categorias": 3}}
+  },
+  {
+    "id": 5, "aluno": "2022101", "tipo": "aproveitamento",
+    "armadilha": "A melhor opção é o item de cursos acima de 40h, que está vazio; o de até 40h está quase cheio.",
+    "pergunta": "Quero fechar as horas que faltam só com cursos online. Qual é o jeito mais eficiente?",
+    "resposta_esperada": "Um curso de TI com mais de 40h: conta 50% da carga horária num item que ainda está vazio (limite 60h). Um curso de 70h fecha as 35h que faltam. Cursos de até 40h só rendem mais 15h no total, porque esse item já tem 45h de 60h. A Categoria V tem 55h livres.",
+    "base": "Anexo A, V-II (duas faixas de carga horária), Categoria V (limite 100h)",
+    "verificacao": {"simulacoes": [
+      {"atividade": {"item": "V-II-2", "quantidade": 70, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 35, "concluido_depois": true},
+      {"atividade": {"item": "V-II-1", "quantidade": 40, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 15}
+    ]}
+  },
+  {
+    "id": 6, "aluno": "2023201", "tipo": "limite_oculto",
+    "armadilha": "O item regional ainda aceita 45h; a subcategoria III-I só tem 40h livres.",
+    "pergunta": "Tenho 3 trabalhos completos aceitos em anais de eventos regionais. Quanto eles vão me dar no total?",
+    "resposta_esperada": "40h, não 45h. Cada trabalho vale 15h e o item regional ainda tem 45h livres (15h de 60h usadas), mas a subcategoria III-I tem limite de 100h e já está com 60h (15h regional + 20h nacional + 25h periódico).",
+    "base": "Anexo A, III-I (limite 100h), trabalho em anais regional (15h, limite 60h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "III-I-4", "quantidade": 3, "data": "2026-12-01", "protocolo": "2026-12-15"}, "ganho": 40}]}
+  },
+  {
+    "id": 7, "aluno": "2023201", "tipo": "aproveitamento",
+    "armadilha": "A mesma maratona cabe em dois itens; só pode um (Art. 12º), e a premiação do adendo rende o triplo.",
+    "pergunta": "Fiquei em 3º lugar na fase nacional da Maratona de Programação, 2 dias de prova, agora em novembro de 2026. Como eu peço para render mais horas?",
+    "resposta_esperada": "Pedir como premiação em concurso nacional (item b do adendo): 30h. Como participação em concurso (5h por dia) renderia só 10h. Não dá para pedir os dois pela mesma atividade (Art. 12º). O adendo vale porque o protocolo será depois de 25/05/2026, e ele inclui maratonas.",
+    "base": "Adendo, itens 1b e 2, e vigência; Anexo A, I-II; Art. 12º",
+    "verificacao": {"simulacoes": [
+      {"atividade": {"item": "III-A-2", "quantidade": 1, "data": "2026-11-20", "protocolo": "2026-12-01"}, "ganho": 30},
+      {"atividade": {"item": "I-II-3", "quantidade": 2, "data": "2026-11-20", "protocolo": "2026-12-01"}, "ganho": 10}
+    ]}
+  },
+  {
+    "id": 8, "aluno": "2023201", "tipo": "ambiguidade",
+    "armadilha": "Tentação de somar 20h de premiação aos 10h já validados.",
+    "pergunta": "A fase regional da Maratona de 2025 eu já validei como participação em concurso (10h). Agora, com o adendo, posso pedir também a premiação de 2º lugar regional?",
+    "resposta_esperada": "Não dá para somar: o Art. 12º veda validar a mesma atividade duas vezes ou em mais de um item. Trocar o enquadramento (sair dos 10h de participação para 20h de premiação) não está previsto, e o adendo vale para pedidos protocolados a partir de 25/05/2026, enquanto o pedido foi feito em 2025. Quem decide é a coordenação (Art. 12º §2º e Art. 14º).",
+    "base": "Art. 12º, Art. 14º, vigência do adendo"
+  },
+  {
+    "id": 9, "aluno": "2023201", "tipo": "ambiguidade",
+    "armadilha": "O adendo cria 10h por apresentação, mas a publicação em anais já exige certificado de apresentação.",
+    "pergunta": "Vou apresentar no evento o trabalho que já contei como publicação nos anais. A apresentação conta mais 10h pelo adendo?",
+    "resposta_esperada": "Depende da coordenação. Pela letra do adendo, apresentar trabalho em evento científico vale 10h (limite 60h). Mas a documentação da publicação em anais já pede certificado de apresentação, e o Art. 12º veda contar a mesma atividade duas vezes. Se publicar e apresentar forem vistos como atividades distintas, são +10h; se não, nada (Art. 14º).",
+    "base": "Adendo, item 1a; Anexo A, III-I (documentação); Art. 12º; Art. 14º",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "III-A-1", "quantidade": 1, "data": "2026-12-05", "protocolo": "2026-12-15"}, "ganho": 10}]}
+  },
+  {
+    "id": 10, "aluno": "2023201", "tipo": "limite_oculto",
+    "armadilha": "A vigência do adendo depende da data do protocolo, não da data da atividade.",
+    "pergunta": "Ganhei um prêmio regional de programação em março de 2026 e protocolei em 20 de maio de 2026, mas foi negado. Por quê? Ainda tenho chance?",
+    "resposta_esperada": "Foi negado porque o item de premiação foi criado pelo adendo de 25/05/2026, que só vale para solicitações protocoladas a partir dessa data; 20/05 é antes. Como a regra olha a data do protocolo, um novo pedido agora pode render 20h (premiação regional). Vale confirmar com a coordenação.",
+    "base": "Adendo, vigência e item 1c",
+    "verificacao": {"simulacoes": [
+      {"atividade": {"item": "III-A-3", "quantidade": 1, "data": "2026-03-10", "protocolo": "2026-05-20"}, "ganho": 0},
+      {"atividade": {"item": "III-A-3", "quantidade": 1, "data": "2026-03-10", "protocolo": "2026-12-01"}, "ganho": 20}
+    ]}
+  },
+  {
+    "id": 11, "aluno": "2024301", "tipo": "limite_oculto",
+    "armadilha": "Dois limites ao mesmo tempo: teto de 100h da Categoria V e mínimo de 2 categorias.",
+    "pergunta": "Somando todos os meus certificados de cursos dá umas 400 horas de curso. Já fechei as complementares?",
+    "resposta_esperada": "Não. Só 100h contam: a Categoria V (cursos) tem limite de 100h. Além disso, todas as horas estão numa categoria só, e o Art. 9º exige pelo menos 2. Faltam 100h, que precisam vir de outra categoria.",
+    "base": "Anexo A, Categoria V (limite 100h); Art. 9º, parágrafo único",
+    "verificacao": {"saldo": {"total": 100, "concluido": false, "categorias": 1}}
+  },
+  {
+    "id": 12, "aluno": "2024301", "tipo": "limite_oculto",
+    "armadilha": "O curso está registrado e pendente; a data de realização é anterior ao ingresso.",
+    "pergunta": "O meu curso de inglês de 80h que fiz em 2023 conta?",
+    "resposta_esperada": "Não: foi feito antes do ingresso no curso (08/2024), e o Art. 13º diz que atividades anteriores ao ingresso não são avaliadas. O outro curso de inglês, de 2025, já conta 15h.",
+    "base": "Art. 13º",
+    "verificacao": {"atividades": [{"id": 301, "contabilizado": 0}]}
+  },
+  {
+    "id": 13, "aluno": "2024301", "tipo": "limite_oculto",
+    "armadilha": "A subcategoria V-III tem 80h livres; a Categoria V, nenhuma.",
+    "pergunta": "Posso aproveitar mais uma disciplina de 60h que fiz no técnico?",
+    "resposta_esperada": "Não rende nada: a Categoria V já atingiu o limite de 100h (a disciplina de Redes, inclusive, já ficou de fora por isso).",
+    "base": "Anexo A, Categoria V (limite 100h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "V-III-1", "quantidade": 60, "data": "2026-12-01", "protocolo": "2026-12-15"}, "ganho": 0}]}
+  },
+  {
+    "id": 14, "aluno": "2024301", "tipo": "aproveitamento",
+    "armadilha": "Precisa achar o item que rende mais por unidade fora da Categoria V e que também resolve a segunda categoria.",
+    "pergunta": "Preciso de 100 horas fora de cursos o mais rápido possível. O que rende mais por atividade?",
+    "resposta_esperada": "Um projeto de pesquisa, extensão ou ensino como bolsista: conta as horas comprovadas até 100h por projeto. Um projeto com 100h fecha sozinho as 200h e resolve a segunda categoria. Estágio rende no máximo 90h (5h/mês, 18 meses), e monitoria, 50h.",
+    "base": "Anexo A, I-I, I-III e I-V (limite de 100h por projeto como bolsista); IV-II",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "I-III-1", "quantidade": 100, "data": "2027-06-30", "protocolo": "2027-07-10"}, "ganho": 100, "concluido_depois": true}]}
+  },
+  {
+    "id": 15, "aluno": "2022401", "tipo": "limite_oculto",
+    "armadilha": "200h exatas fazem parecer concluído.",
+    "pergunta": "Já tenho 200 horas. Posso pedir a colação de grau?",
+    "resposta_esperada": "Ainda não: as 200h estão todas na Categoria I (projetos e eventos), e o Art. 9º, parágrafo único, exige diversificar em pelo menos 2 categorias. Também é preciso entregar a documentação até 30 dias antes do fim do último período (Art. 10º).",
+    "base": "Art. 9º, parágrafo único; Art. 10º",
+    "verificacao": {"saldo": {"total": 200, "concluido": false, "categorias": 1}}
+  },
+  {
+    "id": 16, "aluno": "2022401", "tipo": "limite_oculto",
+    "armadilha": "Banca de TCC parece 'outra coisa', mas está na Categoria I.",
+    "pergunta": "Se eu assistir a algumas bancas de TCC isso resolve a segunda categoria?",
+    "resposta_esperada": "Não: assistir banca de TCC (1h por banca) está na subcategoria I-V, ou seja, na Categoria I de novo. Precisa ser uma atividade das Categorias II, III, IV ou V.",
+    "base": "Anexo A, I-V; Art. 9º",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "I-V-3", "quantidade": 3, "data": "2026-12-01", "protocolo": "2026-12-15"}, "ganho": 3, "concluido_depois": false, "categorias_depois": 1}]}
+  },
+  {
+    "id": 17, "aluno": "2022401", "tipo": "ambiguidade",
+    "armadilha": "O Art. 9º remete ao Art. 6º, que lista 8 tipos antes de agrupar em 5 categorias.",
+    "pergunta": "O Art. 9º fala nas categorias 'listadas no Art. 6º'. Pesquisa (inciso I) e eventos (inciso III) são itens diferentes do Art. 6º. Isso já não conta como duas categorias?",
+    "resposta_esperada": "O texto é ambíguo. O Art. 6º lista 8 tipos de atividade (incisos I a VIII) e depois as agrupa em 5 Categorias (I a V). Pelos incisos, pesquisa e eventos seriam 2 tipos; pelas Categorias do Anexo A, os dois estão na Categoria I. O regulamento não resolve; quem decide é a coordenação (Art. 14º). Na prática, o mais seguro é ter horas em outra Categoria.",
+    "base": "Art. 6º, Art. 9º parágrafo único, Art. 14º"
+  },
+  {
+    "id": 18, "aluno": "2022401", "tipo": "limite_oculto",
+    "armadilha": "O item de voluntário tem 60h por projeto e 120h no item; a subcategoria está cheia.",
+    "pergunta": "Fiz outro projeto de pesquisa como voluntário, com 60h comprovadas. Quanto ele soma?",
+    "resposta_esperada": "0h: a subcategoria I-III (pesquisa) tem limite de 120h e já está cheia (100h do projeto como bolsista, que tinha 150h mas é limitado a 100h, mais 20h do projeto voluntário).",
+    "base": "Anexo A, I-III (limite 120h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "I-III-2", "quantidade": 60, "data": "2026-12-01", "protocolo": "2026-12-15"}, "ganho": 0}]}
+  },
+  {
+    "id": 19, "aluno": "2022401", "tipo": "aproveitamento",
+    "armadilha": "Como as 200h já existem, basta qualquer hora em outra categoria; não precisa de uma atividade grande.",
+    "pergunta": "Qual é o jeito mais rápido de resolver a falta da segunda categoria?",
+    "resposta_esperada": "Qualquer atividade validada fora da Categoria I resolve, porque as 200h já existem. Exemplos curtos: 1 mês de participação num núcleo do câmpus (2h, II-II), uma matéria em jornal ou revista de divulgação (2h, III-I), uma comissão representando o câmpus (10h, II-II), 1 mês de estágio (5h, IV-II) ou um curso de TI de 4h (2h, V-II).",
+    "base": "Art. 9º, parágrafo único; Anexo A",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "II-II-2", "quantidade": 1, "data": "2026-12-31", "protocolo": "2027-01-10"}, "ganho": 2, "concluido_depois": true}]}
+  },
+  {
+    "id": 20, "aluno": "2023501", "tipo": "limite_oculto",
+    "armadilha": "O item de presidente tem 20h livres; a subcategoria do grêmio, só 4h.",
+    "pergunta": "Fui reeleito presidente do DA por mais 6 meses. Quantas horas isso dá?",
+    "resposta_esperada": "4h. Seriam 30h (5h/mês) e o item de presidente ainda tem 20h livres (60h de 80h), mas a subcategoria II-IV tem limite de 80h e já está com 76h (16h como membro da diretoria + 60h como presidente).",
+    "base": "Anexo A, II-IV (limite 80h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "II-IV-1", "quantidade": 6, "data": "2026-12-31", "protocolo": "2027-01-10"}, "ganho": 4}]}
+  },
+  {
+    "id": 21, "aluno": "2023501", "tipo": "limite_oculto",
+    "armadilha": "Conta o dobro (40h); o item tem 52h livres, mas a subcategoria tem 32h.",
+    "pergunta": "Vou ministrar uma oficina de 20 horas na Semana Acadêmica. Quanto conta?",
+    "resposta_esperada": "32h. Ministrante conta o dobro da carga horária (40h) e o item ainda tem 52h livres, mas a subcategoria II-I tem limite de 80h e já está com 48h (duas comissões organizadoras de 20h + a oficina de 4h, que contou 8h). E as horas continuam todas na Categoria II.",
+    "base": "Anexo A, II-I (limite 80h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "II-I-2", "quantidade": 20, "data": "2026-12-01", "protocolo": "2026-12-15"}, "ganho": 32}]}
+  },
+  {
+    "id": 22, "aluno": "2023501", "tipo": "regra",
+    "armadilha": "Contar o mesmo evento duas vezes.",
+    "pergunta": "Na Semana Acadêmica eu fui da comissão organizadora e também assisti às palestras. Posso pedir as duas coisas?",
+    "resposta_esperada": "Não para o mesmo período: o Art. 12º §1º dá exatamente esse exemplo, de que a mesma atividade não pode ser registrada como 'equipe executora' e 'participação em evento' no mesmo período ou turno.",
+    "base": "Art. 12º, §1º"
+  },
+  {
+    "id": 23, "aluno": "2023501", "tipo": "aproveitamento",
+    "armadilha": "Faltam 40h, mas também falta a segunda categoria; mais gestão não resolve.",
+    "pergunta": "Faltam 40 horas e só tenho atividades de gestão. O que eu faço?",
+    "resposta_esperada": "Precisa de horas fora da Categoria II (Art. 9º), e mais gestão já não ajuda (as subcategorias II-I e II-IV estão quase cheias). Opções que fecham as 40h numa atividade só: 8 meses de estágio (5h/mês), um curso de TI de 80h (conta 50%), 40h de eventos técnicos, ou um projeto de pesquisa ou extensão com 40h comprovadas.",
+    "base": "Art. 9º, parágrafo único; Anexo A",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "IV-II-1", "quantidade": 8, "data": "2027-08-31", "protocolo": "2027-09-10"}, "ganho": 40, "concluido_depois": true}]}
+  },
+  {
+    "id": 24, "aluno": "2022601", "tipo": "ambiguidade",
+    "armadilha": "Aplicar os 50% de coinventor a software, onde o anexo não escreve essa regra.",
+    "pergunta": "Registrei outro software no INPI junto com 3 colegas. Conta 25h para cada um?",
+    "resposta_esperada": "Pela letra do anexo, sim: registro de software vale 25h, e a redução de 50% para coautores só está escrita para patente, desenho industrial e marca. A subcategoria III-II ainda tem 62,5h livres. Como a regra de coautoria não aparece para software, vale confirmar com a coordenação (Art. 14º).",
+    "base": "Anexo A, III-II",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "III-II-4", "quantidade": 1, "coinventor": true, "data": "2026-12-01", "protocolo": "2026-12-15"}, "ganho": 25}]}
+  },
+  {
+    "id": 25, "aluno": "2022601", "tipo": "ambiguidade",
+    "armadilha": "Depósito e concessão são itens diferentes, mas podem ser a mesma invenção (Art. 12º).",
+    "pergunta": "Se a patente que depositei como coinventor for concedida, ganho mais horas?",
+    "resposta_esperada": "Pelo anexo, a concessão é outro item: 50h, e coinventor recebe 50%, então 25h (a subcategoria III-II tem espaço). Mas a concessão pode ser vista como a mesma atividade do depósito já contado, e o Art. 12º veda validar a mesma atividade duas vezes; a coordenação decide (Art. 14º).",
+    "base": "Anexo A, III-II; Art. 12º; Art. 14º",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "III-II-2", "quantidade": 1, "coinventor": true, "data": "2027-03-01", "protocolo": "2027-03-15"}, "ganho": 25}]}
+  },
+  {
+    "id": 26, "aluno": "2025701", "tipo": "limite_oculto",
+    "armadilha": "Curso de 3h fica abaixo da faixa mínima de 4h.",
+    "pergunta": "Aquele curso de Git de 3 horas que está pendente vai contar?",
+    "resposta_esperada": "Não: curso de curta duração precisa ter entre 4 e 40 horas (ou mais de 40h, na outra faixa); 3h fica abaixo do mínimo.",
+    "base": "Anexo A, V-II",
+    "verificacao": {"atividades": [{"id": 703, "contabilizado": 0}]}
+  },
+  {
+    "id": 27, "aluno": "2025701", "tipo": "limite_oculto",
+    "armadilha": "Curso de idioma tem carga horária mínima; e curta duração é só de TI.",
+    "pergunta": "Fiz um curso de espanhol de 40 horas. Entra como curso de idioma?",
+    "resposta_esperada": "Não: curso de idioma exige carga horária mínima de 60h (V-I). Também não entra como curso de curta duração, que precisa ser na área de tecnologia da informação.",
+    "base": "Anexo A, V-I e V-II",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "V-I-1", "quantidade": 1, "carga_horaria": 40, "data": "2026-11-20", "protocolo": "2026-12-01"}, "ganho": 0}]}
+  },
+  {
+    "id": 28, "aluno": "2025701", "tipo": "limite_oculto",
+    "armadilha": "A subcategoria de eventos culturais (50h) já está cheia.",
+    "pergunta": "Vai ter uma semana cultural de 30 horas em outra universidade. Vale a pena para as horas?",
+    "resposta_esperada": "Não: a subcategoria I-IV (eventos culturais ou não técnicos) tem limite de 50h e já está cheia (30h do festival do IFSul + 20h da semana cultural anterior, que já tinha sido cortada no limite de 20h por evento de outra instituição).",
+    "base": "Anexo A, I-IV (limite 50h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "I-IV-2", "quantidade": 30, "data": "2026-12-01", "protocolo": "2026-12-15"}, "ganho": 0}]}
+  },
+  {
+    "id": 29, "aluno": "2021801", "tipo": "regra",
+    "armadilha": "Aproveitar horas excedentes em outra situação do curso.",
+    "pergunta": "Tenho 220 horas. Posso usar as 20 que sobraram para aproveitar alguma disciplina?",
+    "resposta_esperada": "Não: o Art. 12º veda o aproveitamento das atividades complementares em outras situações do curso. As complementares já estão cumpridas (200h em 3 categorias); falta entregar a documentação até 30 dias antes do fim do último período (Art. 10º).",
+    "base": "Art. 12º; Art. 10º",
+    "verificacao": {"saldo": {"total": 220, "concluido": true, "categorias": 3}}
+  },
+  {
+    "id": 30, "aluno": "", "tipo": "ambiguidade",
+    "armadilha": "O anexo diz 'mínimo de 20 mensais' sem dizer a unidade.",
+    "pergunta": "Fiz um estágio trabalhando 15 horas por mês. Conta como estágio extracurricular?",
+    "resposta_esperada": "Provavelmente não, mas o texto está incompleto. O anexo exige 'mínimo de 20 mensais de atividade na área', sem dizer a unidade (o mais provável é horas). Por essa leitura, 15h por mês não atinge o mínimo. Como o texto não fecha a questão, quem decide é a coordenação (Art. 14º).",
+    "base": "Anexo A, IV-II; Art. 14º"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "matricula": "2022101",
+    "nome": "Aluno Fictício 1 (teto da categoria IV)",
+    "ingresso": "2022-03-01",
+    "atividades": [
+      {"id": 101, "item": "IV-I-1", "descricao": "Monitoria de Algoritmos, 2022/2", "quantidade": 1, "data": "2022-12-15", "protocolo": "2023-01-10", "situacao": "validada"},
+      {"id": 102, "item": "IV-I-1", "descricao": "Monitoria de Estruturas de Dados, 2023/1", "quantidade": 1, "data": "2023-07-10", "protocolo": "2023-08-01", "situacao": "validada"},
+      {"id": 103, "item": "I-II-1", "descricao": "Semana Acadêmica da Computação 2023 (participante)", "quantidade": 30, "data": "2023-10-20", "protocolo": "2023-11-05", "situacao": "validada"},
+      {"id": 104, "item": "V-II-1", "descricao": "Curso online de Docker (20h)", "quantidade": 20, "data": "2023-11-30", "protocolo": "2023-12-10", "situacao": "validada"},
+      {"id": 105, "item": "V-II-1", "descricao": "Curso de Go (30h)", "quantidade": 30, "data": "2024-03-15", "protocolo": "2024-04-01", "situacao": "validada"},
+      {"id": 106, "item": "V-II-1", "descricao": "Curso de Kubernetes (40h)", "quantidade": 40, "data": "2024-06-20", "protocolo": "2024-07-01", "situacao": "validada"},
+      {"id": 107, "item": "IV-II-1", "descricao": "Estágio em desenvolvimento web, 8 meses", "quantidade": 8, "data": "2024-12-20", "protocolo": "2025-01-15", "situacao": "validada"}
+    ]
+  },
+  {
+    "matricula": "2023201",
+    "nome": "Aluno Fictício 2 (publicações e adendo)",
+    "ingresso": "2023-03-01",
+    "atividades": [
+      {"id": 201, "item": "IV-I-1", "descricao": "Monitoria de Cálculo I, 2023/2", "quantidade": 1, "data": "2023-12-15", "protocolo": "2024-01-10", "situacao": "validada"},
+      {"id": 202, "item": "III-I-4", "descricao": "Trabalho completo nos anais da Mostra Regional de Computação", "quantidade": 1, "data": "2024-05-20", "protocolo": "2024-06-01", "situacao": "validada"},
+      {"id": 203, "item": "I-II-1", "descricao": "Participação em congressos e seminários, 2024", "quantidade": 40, "data": "2024-11-10", "protocolo": "2024-12-01", "situacao": "validada"},
+      {"id": 204, "item": "III-I-3", "descricao": "Trabalho completo nos anais de evento nacional", "quantidade": 1, "data": "2025-04-15", "protocolo": "2025-05-01", "situacao": "validada"},
+      {"id": 205, "item": "III-I-1", "descricao": "Artigo completo em periódico indexado", "quantidade": 1, "data": "2025-08-01", "protocolo": "2025-08-20", "situacao": "validada"},
+      {"id": 206, "item": "I-II-3", "descricao": "Maratona de Programação SBC, fase regional (2 dias), 2º lugar", "quantidade": 2, "data": "2025-09-13", "protocolo": "2025-10-10", "situacao": "validada"}
+    ]
+  },
+  {
+    "matricula": "2024301",
+    "nome": "Aluno Fictício 3 (só cursos)",
+    "ingresso": "2024-08-01",
+    "atividades": [
+      {"id": 301, "item": "V-I-1", "descricao": "Curso de inglês, 80h (feito antes do ingresso)", "quantidade": 1, "carga_horaria": 80, "data": "2023-12-01", "protocolo": "2024-09-01", "situacao": "pendente"},
+      {"id": 302, "item": "V-II-2", "descricao": "Curso de Python, 60h", "quantidade": 60, "data": "2024-10-15", "protocolo": "2024-11-01", "situacao": "validada"},
+      {"id": 303, "item": "V-II-2", "descricao": "Curso de Banco de Dados, 60h", "quantidade": 60, "data": "2025-01-20", "protocolo": "2025-02-01", "situacao": "validada"},
+      {"id": 304, "item": "V-II-1", "descricao": "Curso de Git e GitHub, 40h", "quantidade": 40, "data": "2025-02-20", "protocolo": "2025-03-01", "situacao": "validada"},
+      {"id": 305, "item": "V-I-1", "descricao": "Curso de inglês, 80h", "quantidade": 1, "carga_horaria": 80, "data": "2025-03-20", "protocolo": "2025-04-01", "situacao": "validada"},
+      {"id": 306, "item": "V-II-1", "descricao": "Curso de Linux, 40h", "quantidade": 40, "data": "2025-04-20", "protocolo": "2025-05-01", "situacao": "validada"},
+      {"id": 307, "item": "V-II-2", "descricao": "Curso de Java, 60h", "quantidade": 60, "data": "2025-06-20", "protocolo": "2025-07-01", "situacao": "validada"},
+      {"id": 308, "item": "V-III-1", "descricao": "Disciplina de Redes cursada no Técnico em Informática, 60h", "quantidade": 60, "data": "2025-07-20", "protocolo": "2025-08-01", "situacao": "validada"}
+    ]
+  },
+  {
+    "matricula": "2022401",
+    "nome": "Aluno Fictício 4 (200h numa categoria só)",
+    "ingresso": "2022-03-01",
+    "atividades": [
+      {"id": 401, "item": "I-III-1", "descricao": "Projeto de pesquisa em visão computacional, bolsista, 150h", "quantidade": 150, "data": "2023-12-20", "protocolo": "2024-01-15", "situacao": "validada"},
+      {"id": 402, "item": "I-III-2", "descricao": "Projeto de pesquisa em redes, voluntário, 80h", "quantidade": 80, "data": "2024-12-20", "protocolo": "2025-01-15", "situacao": "validada"},
+      {"id": 403, "item": "I-II-1", "descricao": "Congressos e simpósios, 2023 a 2025", "quantidade": 80, "data": "2025-06-30", "protocolo": "2025-07-15", "situacao": "validada"}
+    ]
+  },
+  {
+    "matricula": "2023501",
+    "nome": "Aluno Fictício 5 (gestão e diretório acadêmico)",
+    "ingresso": "2023-03-01",
+    "atividades": [
+      {"id": 501, "item": "II-IV-2", "descricao": "Membro da diretoria do DA, mar a out/2023", "quantidade": 8, "data": "2023-10-31", "protocolo": "2023-11-15", "situacao": "validada"},
+      {"id": 502, "item": "II-I-1", "descricao": "Comissão organizadora da Semana Acadêmica 2024", "quantidade": 1, "data": "2024-10-25", "protocolo": "2024-11-10", "situacao": "validada"},
+      {"id": 503, "item": "II-IV-1", "descricao": "Presidente do DA, mar/2024 a fev/2025", "quantidade": 12, "data": "2025-02-28", "protocolo": "2025-03-15", "situacao": "validada"},
+      {"id": 504, "item": "II-III-1", "descricao": "Representante discente no colegiado, 18 meses", "quantidade": 18, "data": "2025-06-30", "protocolo": "2025-07-15", "situacao": "validada"},
+      {"id": 505, "item": "II-I-1", "descricao": "Comissão organizadora da Semana Acadêmica 2025", "quantidade": 1, "data": "2025-10-24", "protocolo": "2025-11-10", "situacao": "validada"},
+      {"id": 506, "item": "II-I-2", "descricao": "Ministrante de oficina de Git (4h) na Semana Acadêmica 2025", "quantidade": 4, "data": "2025-10-24", "protocolo": "2025-11-10", "situacao": "validada"}
+    ]
+  },
+  {
+    "matricula": "2022601",
+    "nome": "Aluno Fictício 6 (propriedade intelectual)",
+    "ingresso": "2022-03-01",
+    "atividades": [
+      {"id": 601, "item": "I-II-1", "descricao": "Eventos técnicos, 2022 a 2024", "quantidade": 50, "data": "2024-06-30", "protocolo": "2024-07-15", "situacao": "validada"},
+      {"id": 602, "item": "III-II-4", "descricao": "Registro de software no INPI (sistema de agendamento)", "quantidade": 1, "data": "2024-09-10", "protocolo": "2024-10-01", "situacao": "validada"},
+      {"id": 603, "item": "IV-II-1", "descricao": "Estágio em suporte e infraestrutura, 12 meses", "quantidade": 12, "data": "2025-03-31", "protocolo": "2025-04-15", "situacao": "validada"},
+      {"id": 604, "item": "III-II-1", "descricao": "Depósito de patente de sensor agrícola, como coinventor", "quantidade": 1, "coinventor": true, "data": "2025-06-10", "protocolo": "2025-07-01", "situacao": "validada"}
+    ]
+  },
+  {
+    "matricula": "2025701",
+    "nome": "Aluno Fictício 7 (calouro, casos de fronteira)",
+    "ingresso": "2025-03-01",
+    "atividades": [
+      {"id": 701, "item": "I-IV-1", "descricao": "Festival cultural do IFSul, 30h", "quantidade": 30, "data": "2025-05-20", "protocolo": "2025-06-01", "situacao": "validada"},
+      {"id": 702, "item": "I-II-2", "descricao": "Visitas técnicas a empresas de software, 3 dias", "quantidade": 3, "data": "2025-06-15", "protocolo": "2025-07-01", "situacao": "validada"},
+      {"id": 703, "item": "V-II-1", "descricao": "Curso rápido de Git, 3h", "quantidade": 3, "data": "2025-08-10", "protocolo": "2025-09-01", "situacao": "pendente"},
+      {"id": 704, "item": "I-IV-2", "descricao": "Semana cultural em outra universidade, 25h", "quantidade": 25, "data": "2025-09-20", "protocolo": "2025-10-01", "situacao": "validada"},
+      {"id": 705, "item": "IV-I-1", "descricao": "Monitoria informal sem termo de compromisso", "quantidade": 1, "data": "2025-11-30", "protocolo": "2025-12-05", "situacao": "indeferida"},
+      {"id": 706, "item": "I-V-3", "descricao": "Ouvinte em 6 bancas de TCC", "quantidade": 6, "data": "2025-12-10", "protocolo": "2025-12-20", "situacao": "validada"}
+    ]
+  },
+  {
+    "matricula": "2021801",
+    "nome": "Aluno Fictício 8 (já concluiu)",
+    "ingresso": "2021-03-01",
+    "atividades": [
+      {"id": 801, "item": "I-I-1", "descricao": "Projeto de extensão de inclusão digital, bolsista, 120h", "quantidade": 120, "data": "2022-12-15", "protocolo": "2023-01-10", "situacao": "validada"},
+      {"id": 802, "item": "V-II-2", "descricao": "Curso de Desenvolvimento Mobile, 60h", "quantidade": 60, "data": "2023-07-10", "protocolo": "2023-08-01", "situacao": "validada"},
+      {"id": 803, "item": "IV-II-1", "descricao": "Estágio em empresa de software, 18 meses", "quantidade": 18, "data": "2025-06-30", "protocolo": "2025-07-15", "situacao": "validada"}
+    ]
+  }
+]
