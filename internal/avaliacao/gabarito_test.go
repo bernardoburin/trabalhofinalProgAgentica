@@ -23,8 +23,8 @@ func TestGabaritoBateComOMotor(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(ps) != 30 {
-		t.Errorf("%d perguntas, esperado 30", len(ps))
+	if len(ps) != 35 {
+		t.Errorf("%d perguntas, esperado 35", len(ps))
 	}
 	for _, e := range avaliacao.ConferirGabarito(r, f, ps) {
 		t.Error(e)

@@ -97,5 +97,32 @@
       {"id": 802, "item": "V-II-2", "descricao": "Curso de Desenvolvimento Mobile, 60h", "quantidade": 60, "data": "2023-07-10", "protocolo": "2023-08-01", "situacao": "validada"},
       {"id": 803, "item": "IV-II-1", "descricao": "Estágio em empresa de software, 18 meses", "quantidade": 18, "data": "2025-06-30", "protocolo": "2025-07-15", "situacao": "validada"}
     ]
+  },
+  {
+    "matricula": "2023901",
+    "nome": "Aluno Fictício 9 (perfil do cenário: 7º semestre, 140h)",
+    "ingresso": "2023-08-01",
+    "atividades": [
+      {"id": 901, "item": "IV-I-1", "descricao": "Monitoria de Algoritmos, 2024/2", "quantidade": 1, "data": "2024-12-10", "protocolo": "2025-01-15", "situacao": "validada"},
+      {"id": 902, "item": "I-II-1", "descricao": "Semana Acadêmica da Computação 2024 (participante)", "quantidade": 20, "data": "2024-10-18", "protocolo": "2024-11-05", "situacao": "validada"},
+      {"id": 903, "item": "V-II-2", "descricao": "Curso online de Banco de Dados (80h)", "quantidade": 80, "data": "2025-05-20", "protocolo": "2025-06-02", "situacao": "validada"},
+      {"id": 904, "item": "IV-II-1", "descricao": "Estágio extracurricular em desenvolvimento (6 meses)", "quantidade": 6, "data": "2025-08-30", "protocolo": "2025-09-10", "situacao": "validada"},
+      {"id": 905, "item": "II-III-1", "descricao": "Centro Acadêmico de Computação, gestão 2025 (10 meses)", "quantidade": 10, "data": "2025-12-15", "protocolo": "2026-01-20", "situacao": "validada"},
+      {"id": 906, "item": "V-II-1", "descricao": "Curso online de Git (10h)", "quantidade": 10, "data": "2026-02-10", "protocolo": "2026-02-20", "situacao": "validada"},
+      {"id": 907, "item": "III-A-3", "descricao": "Maratona de programação regional, 3º lugar (protocolada antes do adendo)", "quantidade": 1, "data": "2026-04-12", "protocolo": "2026-04-30", "situacao": "validada"}
+    ]
+  },
+  {
+    "matricula": "20241001",
+    "nome": "Aluno Fictício 10 (limites de segundo nível na Categoria II e pendência)",
+    "ingresso": "2024-03-01",
+    "atividades": [
+      {"id": 1001, "item": "II-II-1", "descricao": "Comissão de organização da feira de cursos (3 atividades)", "quantidade": 3, "data": "2025-03-20", "protocolo": "2025-04-05", "situacao": "validada"},
+      {"id": 1002, "item": "II-II-2", "descricao": "Núcleo de Estudos em Software Livre (12 meses)", "quantidade": 12, "data": "2025-06-30", "protocolo": "2025-07-10", "situacao": "validada"},
+      {"id": 1003, "item": "II-III-1", "descricao": "Colegiado do curso, representante discente (24 meses)", "quantidade": 24, "data": "2025-11-30", "protocolo": "2025-12-10", "situacao": "validada"},
+      {"id": 1004, "item": "II-III-2", "descricao": "Representação estudantil em entidade regional (12 meses)", "quantidade": 12, "data": "2026-03-31", "protocolo": "2026-04-10", "situacao": "validada"},
+      {"id": 1005, "item": "III-A-1", "descricao": "Apresentação de trabalho em evento científico (3 apresentações)", "quantidade": 3, "data": "2026-06-20", "protocolo": "2026-07-01", "situacao": "validada"},
+      {"id": 1006, "item": "IV-III-1", "descricao": "Trabalho em empresa de TI (4 meses), aguardando análise", "quantidade": 4, "data": "2026-09-30", "protocolo": "2026-10-15", "situacao": "pendente"}
+    ]
   }
 ]

@@ -243,5 +243,45 @@
     "pergunta": "Fiz um estágio trabalhando 15 horas por mês. Conta como estágio extracurricular?",
     "resposta_esperada": "Provavelmente não, mas o texto está incompleto. O anexo exige 'mínimo de 20 mensais de atividade na área', sem dizer a unidade (o mais provável é horas). Por essa leitura, 15h por mês não atinge o mínimo. Como o texto não fecha a questão, quem decide é a coordenação (Art. 14º).",
     "base": "Anexo A, IV-II; Art. 14º"
+  },
+  {
+    "id": 31, "aluno": "2023901", "tipo": "limite_oculto",
+    "armadilha": "O item e a subcategoria do estágio ainda têm folga; quem corta é o limite da Categoria IV (100h), que já tem 55h.",
+    "pergunta": "Estou pensando em fazer mais 12 meses de estágio. Isso fecha as horas que faltam?",
+    "resposta_esperada": "Não fecha. 12 meses de estágio dariam 60h, mas só entram 45h, porque a Categoria IV tem limite de 100h e já está em 55h (monitoria 25h e estágio de 6 meses 30h). O limite do item e o da subcategoria de estágio (90h) ainda têm folga; o que corta é o da categoria. O total iria a 185h e ainda faltariam 15h.",
+    "base": "Anexo A, IV-II (estágio, 5h por mês); limite da Categoria IV (100h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "IV-II-1", "quantidade": 12, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 45}]}
+  },
+  {
+    "id": 32, "aluno": "2023901", "tipo": "limite_oculto",
+    "armadilha": "O curso é longo (acima de 40h), mas esse item já tem 40h das 60h permitidas; a subcategoria e a categoria têm folga.",
+    "pergunta": "Vou fazer mais um curso online de 60h. Conta as 30h?",
+    "resposta_esperada": "Conta 20h, não 30h. Curso acima de 40h vale 50% da carga horária, mas o item de cursos acima de 40h tem limite de 60h e já tem 40h usadas (curso de Banco de Dados de 80h). Sobram 20h nesse item. A subcategoria V-II e a Categoria V ainda têm folga.",
+    "base": "Anexo A, V-II (cursos acima de 40h, limite de 60h por item)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "V-II-2", "quantidade": 60, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 20}]}
+  },
+  {
+    "id": 33, "aluno": "20241001", "tipo": "limite_oculto",
+    "armadilha": "Os dois itens novos parecem independentes, mas as duas subcategorias da Categoria II já estão no limite.",
+    "pergunta": "Quero entrar em mais um núcleo do câmpus por 12 meses e continuar na representação estudantil fora da instituição. Isso soma horas?",
+    "resposta_esperada": "Não soma nada. A subcategoria de comissões e núcleos tem limite de 40h e já está em 40h (comissões 30h mais núcleo 10h). A subcategoria de gestão e representação tem limite de 60h e já está em 60h (colegiado 40h mais representação 20h). Um novo mês nesses itens conta 0h.",
+    "base": "Anexo A, II-II (limite de 40h) e II-III (limite de 60h)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "II-II-2", "quantidade": 12, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 0}, {"atividade": {"item": "II-III-2", "quantidade": 12, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 0}]}
+  },
+  {
+    "id": 34, "aluno": "20241001", "tipo": "aproveitamento",
+    "armadilha": "A Categoria II está cheia, as apresentações do adendo já têm metade do item usada, e a atividade pendente ainda não conta.",
+    "pergunta": "Faltam 70 horas e eu não quero perder tempo com o que não conta. O que vale a pena fazer?",
+    "resposta_esperada": "Gestão, representação, comissões e núcleos (Categoria II) já não rendem mais nada. Apresentações em eventos científicos ainda rendem mais 30h (o item tem limite de 60h e já tem 30h). O trabalho em empresa de 4 meses (20h) está pendente e só conta depois de validado. O que fecha as 200h é estágio extracurricular: 14 meses a 5h por mês dão 70h, e o total fica em 200h com 3 categorias. Combinando 3 apresentações (30h) e 8 meses de estágio (40h) também chega a 70h.",
+    "base": "Anexo A, II-II, II-III, III-A (adendo), IV-II; Art. 9º (mínimo de 2 categorias)",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "IV-II-1", "quantidade": 14, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 70, "concluido_depois": true}, {"atividade": {"item": "III-A-1", "quantidade": 3, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 30}]}
+  },
+  {
+    "id": 35, "aluno": "2023901", "tipo": "aproveitamento",
+    "armadilha": "O item de cursos longos está quase cheio; o de cursos curtos (até 40h) está quase vazio.",
+    "pergunta": "Faltam 60 horas. Faço mais estágio, cursos online ou os dois? Qual é o jeito mais eficiente?",
+    "resposta_esperada": "O estágio rende mais por mês, mas só mais 9 meses entram (45h), porque a Categoria IV já está em 55h de 100h. Cursos online de até 40h têm folga: um curso de 40h conta 20h, e o item aceita até 55h a mais. Cursos acima de 40h só rendem mais 20h (o item já tem 40h de 60h). Uma combinação que fecha as 60h é 9 meses de estágio (45h) mais cursos de até 40h somando pelo menos 30h de carga (15h contadas).",
+    "base": "Anexo A, IV-II, V-II (duas faixas de carga horária); limites das Categorias IV e V",
+    "verificacao": {"simulacoes": [{"atividade": {"item": "IV-II-1", "quantidade": 9, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 45}, {"atividade": {"item": "V-II-1", "quantidade": 40, "data": "2026-12-10", "protocolo": "2026-12-15"}, "ganho": 20}]}
   }
 ]
